@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
             val player1Name = player1EditText.text?.toString()?.trim()
             val player2Name = player2EditText.text?.toString()?.trim()
 
+Toast.makeText(this,"Click",Toast.LENGTH_SHORT).show()
+
             if (player1Name.isNullOrEmpty() || player2Name.isNullOrEmpty()) {
                 Toast.makeText(this, "Please enter both player names", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
