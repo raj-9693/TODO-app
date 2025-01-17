@@ -11,10 +11,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var player1EditText: TextInputEditText
     private lateinit var player2EditText: TextInputEditText
     private lateinit var submitButton: Button
+    private lateinit var nextButton:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        nextButton=findViewById(R.id.nextButton)
+        nextButton.setOnClickListener {
+            val intent=Intent(this,MainActivity2::class.java)
+            startActivity(intent)
+        }
+
 
         // Initialize views
         player1EditText = findViewById(R.id.player1EditText)
