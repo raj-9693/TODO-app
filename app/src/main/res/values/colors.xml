@@ -4,4 +4,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#0F8ED3</color>
     <color name="red">#D34417</color>
+
+    <!-- Light Mode Colors -->
+    <color name="background_light">#FFFFFF</color>
+    <color name="text_light">#000000</color>
+
+    <!-- Dark Mode Colors -->
+    <color name="background_dark">#000000</color>
+    <color name="text_dark">#FFFFFF</color>
+
 </resources>

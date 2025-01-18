@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 
 class MainActivity2 : AppCompatActivity() {
@@ -39,9 +40,22 @@ class MainActivity2 : AppCompatActivity() {
             Toast.makeText(this,"Save red",Toast.LENGTH_SHORT).show()
         }
 
-
-
-
+//        val mySwitch: SwitchMaterial = findViewById(R.id.mySwitch)
+//
+//        // Toggle state change listener
+//        mySwitch.setOnCheckedChangeListener { _, isChecked ->
+//            if (isChecked) {
+//                // When switch is ON
+//                Toast.makeText(this, "Switch ON", Toast.LENGTH_SHORT).show()
+//                LeneyarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+//            } else {
+//                // When switch is OFF
+//
+//                Toast.makeText(this, "Switch OFF  ", Toast.LENGTH_SHORT).show()
+//                LeneyarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.black))
+//            }
+//        }
+//
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
