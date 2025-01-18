@@ -5,12 +5,18 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+
 
 class MainActivity2 : AppCompatActivity() {
     private lateinit var button1: Button
     private lateinit var button2 :Button
+
+    private lateinit var LeneyarLayout: ConstraintLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -20,13 +26,21 @@ class MainActivity2 : AppCompatActivity() {
 
         button1= findViewById(R.id.button1)
         button2=findViewById(R.id.button2)
+        LeneyarLayout=findViewById(R.id.main)
 
         button1.setOnClickListener {
-            Toast.makeText(applicationContext,"Download video",Toast.LENGTH_SHORT).show()
+
+
+            LeneyarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+            Toast.makeText(applicationContext,"Save blue",Toast.LENGTH_SHORT).show()
         }
         button2.setOnClickListener {
-            Toast.makeText(this,"Save the image",Toast.LENGTH_SHORT).show()
+            LeneyarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.black))
+            Toast.makeText(this,"Save red",Toast.LENGTH_SHORT).show()
         }
+
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
